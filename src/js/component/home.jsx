@@ -43,21 +43,21 @@ const Home = () => {
                 <div className="myTasks" key={i}>
                   {el}
                   <span
-                    className="fa-solid fa-xmark myXMark"
+                    className="fa-solid fa-xmark delete"
                     onClick={() => handleDelete(i)}
                   ></span>
                 </div>
               ))
             ) : (
-              <div className="noTasks">No tasks left to do!</div>
+              <div className="noTasks">All done!</div>
             )}
           </ul>
           <div className="leftTasks">
             <p>{list.length > 0
               ? list.length > 1
-                ? `${list.length} tasks to do`
+                ? `${list.length} tasks to do!!`
                 : `${list.length} task to do`
-              : "No tasks."}</p>
+              : "No tasks!"}</p>
           </div>
         </div>
       </div>

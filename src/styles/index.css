@@ -19,14 +19,21 @@ body {
   box-shadow: 2px 2px 8px 1px #2808a591;
 }
 .myInput {
-  margin: 10px 20px ;
+ color: white;
+  margin: 10px 16px ;
   background-color: transparent;
-  width: 80%;
+  width: calc(100% - 32px);
   border: none;
   font-family: inherit;
   font-size: 22px;
   cursor: pointer;
-  padding: 2px;
+  padding: 4px;
+}
+
+.myInput:focus{
+  background-color: #fadc8ba3;
+  border-radius: 10px;
+  border: #a4bde0;
 }
 
 ul {
@@ -43,11 +50,22 @@ ul {
 .myTasks {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   border: 1px 0px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 22px;
-  padding-top: 5px;
+  padding: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.delete{
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.delete:hover{
+  transform: scale(1.1);
+  color: #fadd8b;
 }
 
 .leftTasks{
