@@ -1,12 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
-/* 
+body {
+  background-color: #274f8b;
+}
+.myTitle {
+  margin-left: 30%;
+  font-family: "Comfortaa", sans-serif;
+  letter-spacing: -10px;
+  margin-bottom: -20px;
+  color: white;
+  font-size: 120px;
+}
+.myContainer {
+  background-color: #a4bde0;
+  width: 40%;
+  border: solid 2px #fadd8b;
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px 1px #2808a591;
+}
+.myInput {
+  margin: 10px 20px ;
+  background-color: transparent;
+  width: 80%;
+  border: none;
+  font-family: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 2px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+ul {
+  margin: 0;
+  padding: 0;
+}
 
-*/
+.noTasks {
+  color: rgba(255, 255, 255, 0.619);
+  font-size: 22px;
+  margin: 5px 20px 5px 20px;
+}
+
+.myTasks {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border: 1px 0px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 22px;
+  padding-top: 5px;
+}
+
+.leftTasks{
+  margin: 5px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: #fadd8b 1px solid;
+}
+.leftTasks p{
+  margin-top: 5px;
+  margin-left: 18px;
+}
