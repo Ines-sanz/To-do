@@ -52,20 +52,29 @@ ul {
   justify-content: space-between;
   align-items: center;
   border: 1px 0px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 22px;
   padding: 5px;
   margin-left: 20px;
   margin-right: 20px;
 }
-
-.delete{
+.taskDone{
+ text-decoration: line-through #fadd8b;
+ color: rgba(255, 255, 255, 0.4);
+}
+.delete, .done{
   color: rgba(255, 255, 255, 0.1);
+  margin-left: 2px;
+}
+
+.done:hover{
+  transform: scale(1.1);
+  color: #fadd8b;
 }
 
 .delete:hover{
   transform: scale(1.1);
-  color: #fadd8b;
+  color: #d14c18;
 }
 
 .leftTasks{

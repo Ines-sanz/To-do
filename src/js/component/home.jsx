@@ -4,13 +4,14 @@ import React, { useState } from "react";
 //create your first component
 
 const Home = () => {
-  const [task, setTask] = useState("");
+  const [task, setTask] = useState('');
   const [list, setList] = useState([]);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (task.trim() !== "") {
-      setList([task, ...list]);
+      setList([{text: task, done: false}, ...list]);
       setTask("");
     } else {
       alert("Task cannot be empty");
@@ -21,8 +22,10 @@ const Home = () => {
     setList((prevList) => prevList.filter((_, i) => i !== index));
   };
 
-  console.log(task);
-  console.log("-------->", list);
+  const handleDone = (ind) =>{
+		setList((prevList) => prevList.map((e, i) => i === ind ? {...e, done: !e.done} : e))
+	}
+
   return (
     <div className="container-fluid">
       <h1 className="myTitle pt-5 pb-1">To do :</h1>
@@ -40,12 +43,18 @@ const Home = () => {
           <ul>
             {list.length > 0 ? (
               list.map((el, i) => (
-                <div className="myTasks" key={i}>
-                  {el}
+                <div className={el.done? 'taskDone myTasks' : 'myTasks'} key={i}>
+                  {el.text}
+                  <div>
+                  <span
+                    className="fa-solid fa-check done"
+                    onClick={()=> handleDone(i)}
+                  ></span>
                   <span
                     className="fa-solid fa-xmark delete"
                     onClick={() => handleDelete(i)}
                   ></span>
+                  </div>
                 </div>
               ))
             ) : (
@@ -53,10 +62,10 @@ const Home = () => {
             )}
           </ul>
           <div className="leftTasks">
-            <p>{list.length > 0
-              ? list.length > 1
-                ? `${list.length} tasks to do!!`
-                : `${list.length} task to do`
+            <p>{list.filter((task) => !task.done).length > 0
+              ? list.filter((task) => !task.done).length > 1
+                ? `${list.filter((task) => !task.done).length} tasks to do!!`
+                : `${list.filter((task) => !task.done).length} task to do`
               : "No tasks!"}</p>
           </div>
         </div>
