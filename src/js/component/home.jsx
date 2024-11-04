@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import background from "../../img/fondo.png";
 
 //include images into your bundle
 //create your first component
@@ -28,7 +29,8 @@ const Home = () => {
 
   return (
     <div className="container-fluid">
-      <h1 className="myTitle pt-5 pb-1">To do :</h1>
+     
+      <h1 className="myTitle pt-5 pb-1">To do:</h1>
       <div className="d-flex justify-content-center">
         <div className="myContainer">
           <form onSubmit={handleSubmit}>
@@ -69,7 +71,9 @@ const Home = () => {
               : "No tasks!"}</p>
           </div>
         </div>
-      </div>
+      </div> 
+      <div className="bg"><img src={background} alt="" />
+      <div className="circle"></div></div>
     </div>
   );
 };

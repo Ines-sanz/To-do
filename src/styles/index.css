@@ -1,22 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 
-body {
-  background-color: #274f8b;
+.bg {
+  z-index: -2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+.circle{
+  z-index: 2;
+  position: relative;
+  right: -70vw;
+  bottom: 480px;
+  border-radius: 50%;
+  min-width: 120px;
+  min-height: 120px;
+  width: 18vw;
+  height: 18vw;
+  background-color: #d14c18;
+  
 }
 .myTitle {
-  margin-left: 30%;
+  margin-left: 15%;
   font-family: "Comfortaa", sans-serif;
   letter-spacing: -10px;
-  margin-bottom: -20px;
-  color: white;
-  font-size: 120px;
+  font-weight: 100;
+  margin-bottom: -15px;
+  color: #000000;
+  font-size: 80px;
 }
 .myContainer {
-  background-color: #a4bde0;
+  background-color: #a4bde0d8;
   width: 40%;
+  margin-left: -30%;
   border: solid 2px #fadd8b;
-  border-radius: 30px;
-  box-shadow: 2px 2px 8px 1px #2808a591;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px 1px #01189a54;
 }
 .myInput {
  color: white;
@@ -33,7 +54,6 @@ body {
 .myInput:focus{
   background-color: #fadc8ba3;
   border-radius: 10px;
-  border: #a4bde0;
 }
 
 ul {
@@ -42,7 +62,7 @@ ul {
 }
 
 .noTasks {
-  color: rgba(255, 255, 255, 0.619);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 22px;
   margin: 5px 20px 5px 20px;
 }
@@ -52,7 +72,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   border: 1px 0px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 22px;
   padding: 5px;
   margin-left: 20px;
@@ -87,3 +107,18 @@ ul {
   margin-top: 5px;
   margin-left: 18px;
 }
+
+
+
+@media (max-width: 1250px) {
+  .myTitle {
+    margin-left: 10%;
+  }
+
+
+  .myContainer {
+    width: 80%;
+    margin: auto;
+  }
+}
+
