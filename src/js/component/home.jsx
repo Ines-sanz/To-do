@@ -64,11 +64,9 @@ const Home = () => {
             )}
           </ul>
           <div className="leftTasks">
-            <p>{list.filter((task) => !task.done).length > 0
-              ? list.filter((task) => !task.done).length > 1
-                ? `${list.filter((task) => !task.done).length} tasks to do!!`
-                : `${list.filter((task) => !task.done).length} task to do`
-              : "No tasks!"}</p>
+            <p>{list.filter((task) => !task.done).length===0 && `Add some tasks` }
+                {list.filter((task) => !task.done).length===1 && `${list.filter((task) => !task.done).length} task to do` }
+                {list.filter((task) => !task.done).length>1 && `${list.filter((task) => !task.done).length} tasks to do` }</p>
           </div>
         </div>
       </div> 
