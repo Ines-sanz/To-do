@@ -12,14 +12,15 @@
 .circle{
   z-index: 2;
   position: relative;
-  right: -70vw;
-  bottom: 70vh;
+  right: -80vw;
+  bottom: 50vh;
   border-radius: 50%;
   min-width: 120px;
   min-height: 120px;
   width: 18vw;
   height: 18vw;
   background-color: #d14c18;
+  transform: translateX(-50%) translateY(-50%);
   
 }
 .myTitle {
@@ -28,7 +29,7 @@
   letter-spacing: -10px;
   font-weight: 100;
   margin-bottom: -15px;
-  color: #000000;
+  color: #2f2f75;
   font-size: 80px;
 }
 .myContainer {
@@ -52,6 +53,7 @@
 }
 
 .myInput:focus{
+  outline: none;
   background-color: #fadc8ba3;
   border-radius: 10px;
 }
